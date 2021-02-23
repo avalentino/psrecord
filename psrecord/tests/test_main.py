@@ -19,7 +19,7 @@ def test_all_children(tmpdir):
     with open(filename, 'w') as f:
         f.write(TEST_CODE)
 
-    p = subprocess.Popen('{0} {1}'.format(sys.executable, filename).split())
+    p = subprocess.Popen([sys.executable, filename])
 
     import time
     time.sleep(1)
